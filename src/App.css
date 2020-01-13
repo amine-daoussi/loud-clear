@@ -1,33 +1,44 @@
-.App {
-  text-align: center;
+.credit-card{
+    width: 400px;
+    background-color:#042848;
+    color:white;
+    border-radius:10p;
+    padding:0 5px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.credit-card-title{
+    text-align:right;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.credit-card-content {
+    display: flex;
 }
-
-.App-link {
-  color: #61dafb;
+.credit-card-text {
+    flex: 1;
+    padding-right: 10px
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.credit-card-chip{
+    width:50px;
+    height:35px;
+    background-color:  #baaf7d;
+    border-radius:10px;
+}
+.credit-card-number{
+    color: #baaf7d;
+    background-color: rgba(186, 175, 125, 0.2)
+}
+.credit-card-valid-thru {
+    text-align: right
+}
+.credit-card-holder-name {
+    padding: 0;
+    font-size: 1.2em;
+}
+.credit-card-logo {
+    width: 80px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    padding:0 0 10px 0;
+}
+.credit-card-logo img {
+    width: 100%;
 }
