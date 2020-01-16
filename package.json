@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.26.6",
+    "babel-plugin-react-intl": "^5.1.16",
     "bootstrap": "^4.4.1",
     "i18n-react": "^0.7.0",
     "react": "^16.9.0",
