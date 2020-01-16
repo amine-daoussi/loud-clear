@@ -1,16 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "antd/dist/antd.css";
-import ProjectsList from "./ProjectsList";
-import Home from "./Home";
-import Contact from "./Contact";
-import Cent from "./Cent";
-import Forum from "./Forum";
-import tunis from "../img/tunis.png";
-import { Link } from "react-router-dom";
+import logo from '../../assets/images/topBar/logoWhite.png'
+import { Link } from "react-router-dom"; 
 import { Menu } from "antd";
-import "./navbar.css";
+import "./topBar.css";
 
-export default class NavBar extends React.Component {
+export default class TopBar extends React.Component {
   state = {
     current: "mail"
   };
@@ -24,8 +19,8 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <header className="nav-bar">
-        <Link component={Home} to="/" className="nav-logo">
-          <img src={tunis} alt="Logo" />
+        <Link  to="/" className="nav-logo">
+          <img src={logo} alt="Logo" />
         </Link>
         <Menu
           onClick={this.handleClick}
@@ -33,25 +28,33 @@ export default class NavBar extends React.Component {
           mode="horizontal"
           style={{ backgroundColor: "transparent" }}
         >
-          <Menu.Item key="cent">
-            <Link component={Cent} to="/cent">
-              Les Cent
+          <Menu.Item key="services">
+            <Link className='nav-bar-link'  to="/services">
+              Services
             </Link>
           </Menu.Item>
-
-          <Menu.Item key="forum">
-            <Link component={Forum} to="/forums">
-              Les Forums
+          <Menu.Item key="products">
+            <Link className='nav-bar-link' to="/products">
+              Products
             </Link>
           </Menu.Item>
-          <Menu.Item key="projet">
-            <Link component={ProjectsList} to="/projects">
-              Les Projets
+          <Menu.Item key="rental">
+            <Link className='nav-bar-link' to="/rental">
+              Rental
             </Link>
           </Menu.Item>
-
+          <Menu.Item key="showRoom">
+            <Link className='nav-bar-link' to="/showRoom">
+              Show room
+            </Link>
+          </Menu.Item>          
+          <Menu.Item key="events">
+            <Link className='nav-bar-link' to="/events">
+              Events
+            </Link>
+          </Menu.Item>
           <Menu.Item key="contact">
-            <Link component={Contact} to="/contact">
+            <Link className='nav-bar-link' to="/contact">
               Contact
             </Link>
           </Menu.Item>
