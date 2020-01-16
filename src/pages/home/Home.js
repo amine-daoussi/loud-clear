@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../../layout/index'
 import CustomizedCarousel from '../../shared/components/customizedCarousel/index'
 import Presentation from '../../pages/home/presentation/index'
 import carousselHome1 from '../../assets/images/home/caroussel/carousselHome1.JPG'
@@ -15,7 +14,6 @@ const carousselHomeData=[carousselHome1,carousselHome2,carousselHome3,carousselH
 const Home=()=>{
     return(
     <div className='home'>
-        <Layout/>
         <CustomizedCarousel carousselHomeData={carousselHomeData}/>
         <Presentation />
     </div>)

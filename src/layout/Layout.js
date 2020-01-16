@@ -2,10 +2,11 @@ import TopBar from './topBar/index'
 import Footer from './footer/index'
 import React from 'react'
 
-const Layout =()=>{
+const Layout =({children})=>{
     return(
     <div className='layout'>
         <TopBar/>
+        {children}
         <Footer/>
     </div>)
 }
