@@ -1,0 +1,40 @@
+.customized-tabs{
+    background-color: white;
+    display: flex; 
+    &__tabs-container{
+        .ant-tabs-tab-prev,
+        .ant-tabs-tab-next {
+            top: -2px;
+        }
+
+        .tabs-container {
+            .ant-tabs-bar {
+                margin-bottom: 30px;
+            }
+        }
+
+        .submit-project-icon {
+            margin-right: 6px;
+        }
+
+        &__title {
+            font-size: 1rem;
+            color : black ;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .ant-tabs-tab-active {
+            span {
+                color: #393c40 !important;
+                font-weight: 500;
+            }
+
+        }
+
+        .ant-tabs-ink-bar {
+            background-color: #170ff0;
+            height: 1px;
+        }
+    }
+}
