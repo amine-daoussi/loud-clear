@@ -1,40 +1,45 @@
-.customized-tabs{
-    background-color: white;
-    display: flex; 
-    &__tabs-container{
-        .ant-tabs-tab-prev,
-        .ant-tabs-tab-next {
-            top: -2px;
-        }
 
-        .tabs-container {
-            .ant-tabs-bar {
-                margin-bottom: 30px;
-            }
-        }
+.RRT__container{
+    margin-top:6vh
+}
 
-        .submit-project-icon {
-            margin-right: 6px;
-        }
-
-        &__title {
-            font-size: 1rem;
-            color : black ;
-            font-weight: normal;
-            text-align: left;
-        }
-
-        .ant-tabs-tab-active {
-            span {
-                color: #393c40 !important;
-                font-weight: 500;
-            }
-
-        }
-
-        .ant-tabs-ink-bar {
-            background-color: #170ff0;
-            height: 1px;
-        }
+.RRT__tab{
+    background-color:transparent!important;
+    z-index: 0!important;
+    
+    
+}
+.RRT__panel h1{
+    color:white!important;
+}
+.RRT__tab:focus{
+    background-color:white!important;
+    color:black!important
+}
+.RRT__tab--first:focus {
+    background-color:white!important;
+    color:black!important;
+}
+.RRT__tab--selected {
+    background: white!important;
+   
+    color:black!important;
+  }
+  .RRT__showmore-label, .RRT__showmore-label--selected{
+      color:black!important;
+      background-color: white;
+      
+  }
+  .RRT__showmore{
+    border: none!important;
+  }
+.RRT__showmore-list, .RRT__showmore-list--opened{
+    background-color: black;
+    border:none!important;
+}
+@media (max-width:'880px'){
+    .RRT__container{
+        margin-top:20px
     }
+    
 }

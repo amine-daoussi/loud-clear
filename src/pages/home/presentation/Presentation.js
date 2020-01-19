@@ -1,5 +1,7 @@
 import React from 'react'
 import './presentation.css'
+import messages from './message'
+
 const Presentation =()=>{
     return(   
 	<section className='home-presentation-container'>		
