@@ -1,20 +1,22 @@
 {
-  "name": "movieeappp",
+  "name": "loud-and-clear",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.26.6",
+    "antd": "^3.26.7",
+    "babel-plugin-react-intl": "^5.1.16",
     "bootstrap": "^4.4.1",
     "i18n-react": "^0.7.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-gesture-gallery": "^1.1.0",
     "react-gesture-responder": "^2.1.0",
     "react-intl": "^3.11.0",
+    "react-responsive-tabs": "^3.3.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1",
-    "sass": "^1.24.4"
+    "sass": "^1.25.0"
   },
   "scripts": {
     "start": "react-scripts start",
