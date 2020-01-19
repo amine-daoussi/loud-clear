@@ -1,35 +1,23 @@
 import React from 'react';
-import { Tabs  } from 'antd'
+
 import './customizedTabs.scss'
-const { TabPane } = Tabs;
+import Tabs from 'react-responsive-tabs';
+import 'react-responsive-tabs/styles.css';
 
-const CustomizedTabs = ({tabMenu}) => {
-    return (
-        <div className ="customized-tabs">
-              <Tabs
-      defaultActiveKey= "1"
-      className="customized-tabs__tabs-container"
-    >
-      {tabMenu.map(tab => (
-        <TabPane
-          tab={
-            <div
-              className="customized-tabs__title"
-            >
-            {tab.title}
-            {console.log(tab)}
-            {console.log(tab.title)}
 
-            </div>
-          }
-          key={tab.id}
-        >
-          {tab.content}
-        </TabPane>
-      ))}
-    </Tabs>
-        </div>
-    );
+function getTabs({tabMenu}) {
+  return tabMenu.map((tab, index) => ({
+    title: tab.title,
+    getContent: () => tab.content,
+    key: index,
+    tabClassName: 'tab',
+    panelClassName: 'panel',
+    transformWidth:300,
+  }));
 }
 
+const CustomizedTabs = ({tabMenu}) => <Tabs className='customized-tabs' items={getTabs({tabMenu})} />
+
 export default CustomizedTabs;
+
+
