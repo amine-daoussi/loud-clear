@@ -3,32 +3,40 @@ import { defineMessages } from 'react-intl'
 export const scope = 'app.containers.rental'
 
 export default defineMessages({
-  title1: {
-    id: `${scope}.title1`,
-    defaultMessage: 'Title 1',
+  minuitUneIVCarre: {
+    id: `${scope}.MinuitUneIVCarre`,
+    defaultMessage: 'Minuit Une IVL carré',
   },
-  title2: {
-    id: `${scope}.title2`,
-    defaultMessage: 'Title 2',
+  monitoringBundle: {
+    id: `${scope}.monitoringBundle`,
+    defaultMessage: 'Monitoring bundle',
   },
-  title3: {
-    id: `${scope}.title3`,
-    defaultMessage: 'Title 3',
+  paBundles: {
+    id: `${scope}.paBundles`,
+    defaultMessage: 'PA bundles',
   },
-  title4: {
-    id: `${scope}.title4`,
-    defaultMessage: 'Title 4',
+  bundleXS : {
+    id: `${scope}.bundleXS`,
+    defaultMessage: 'bundle XS (point source)',
   },
-  title5: {
-    id: `${scope}.title5`,
-    defaultMessage: 'Title 5',
+  bundleS: {
+    id: `${scope}.bundleS`,
+    defaultMessage: 'Bundle S',
   },
-  title6: {
-    id: `${scope}.title6`,
-    defaultMessage: 'Title 6',
+  bundleM: {
+    id: `${scope}.bundleM`,
+    defaultMessage: 'Bundle M',
   },
-  title7: {
-    id: `${scope}.title7`,
-    defaultMessage: 'Title 7',
+  bundleL: {
+    id: `${scope}.bundleL`,
+    defaultMessage: 'Bundle L',
+  },
+  bundleXl: {
+    id: `${scope}.bundleXl`,
+    defaultMessage: 'Bundle XL',
+  },
+  bundleXxl: {
+    id: `${scope}.bundleXxl`,
+    defaultMessage: 'Bundle XXL',
   },
 })
