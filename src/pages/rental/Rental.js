@@ -112,7 +112,7 @@ const Rental = () => {
     }
   ];
   return (
-    <div className="rental">
+    <div className="rental ">
       <CustomizedTabs tabMenu={tabMenu} className="rental-tabs" />
     </div>
   );
