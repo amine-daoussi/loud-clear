@@ -1,129 +1,121 @@
-import React from 'react';
-import CustomizedTabs from '../../shared/components/customizedTabs'
-import Exemple from './exemple/exemple'
-import {FormattedMessage } from "react-intl";
-import messages from './message'
+import React, { Fragment } from "react";
+import CustomizedTabs from "../../shared/components/customizedTabs";
+import ImageGallery from "react-image-gallery";
+import { FormattedMessage } from "react-intl";
+import { bundle1, bundle2, bundle3, bundle4, bundle5, bundle6 } from "./data";
+import messages from "./message";
 
-import './rental.scss'
+import "./rental.scss";
 
-const content1 = <div className='sub-tabs'>
-    <h1  className='sub-tabs-title'>
-        Content 1</h1>
-   
-    <CustomizedTabs tabMenu={[{ title: 'title3',
-            content: 'content1',
-            id: '1'},{ title: 'title1',
-            content: 'content1',
-            id: '2'},{ title: 'title2',
-            content: 'content1',
-            id: '3'}]} className="rental-tabs" />
-    
-</div>
-const content2 = <div>
-    <h1>
-        Content 2</h1>
+const renderBandleInformation = info => {
+  return (
+    <Fragment>
+      <div> title : {info.title}</div>
+      <div> Product list top : {info.ProductListTop}</div>
+      <div> Product list sub : {info.ProductListSub}</div>
+      <div> Amping : {info.title}</div>
+      <div> Capacity : {info.Capacity}</div>
+      <div> Price : {info.Price}</div>
+    </Fragment>
+  );
+};
+
+const content1 = (
+  <div className="sub-tabs">
+    <h1 className="sub-tabs-title"> Content 1</h1>
+  </div>
+);
+
+const content2 = (
+  <div>
+    <h1>Content 2</h1>
     <p>
-        if the content is large , we must write this content under a comoponent wich we will create under this comoponent page
+      if the content is large , we must write this content under a comoponent
+      wich we will create under this comoponent page
     </p>
-</div>
+  </div>
+);
+const ContentForPaBundles = ({ subTabMenu }) => (
+  <CustomizedTabs tabMenu={subTabMenu} className="rental-tabs" />
+);
+
+const ContentForBundItem = ({ data }) => {
+  return (
+    <div className="content-for-bund-item">
+      <div className="content-for-bund-item__images">
+        <ImageGallery items={data.images} sizes="40" />;
+      </div>
+      <div className="content-for-bund-item__info">
+        {renderBandleInformation(data)}
+      </div>
+    </div>
+  );
+};
+
 const Rental = () => {
+  const subTabMenu = [
+    {
+      title: <FormattedMessage {...messages.bundleXS} />,
+      key: "1",
+      content: <ContentForBundItem data={bundle1} />,
+      id: "1"
+    },
+    {
+      title: <FormattedMessage {...messages.bundleS} />,
+      key: "2",
+      content: <ContentForBundItem data={bundle2} />,
+      id: "2"
+    },
+    {
+      title: <FormattedMessage {...messages.bundleM} />,
+      key: "3",
+      content: <ContentForBundItem data={bundle3} />,
+      id: "3"
+    },
+    {
+      title: <FormattedMessage {...messages.bundleL} />,
+      key: "4",
+      content: <ContentForBundItem data={bundle4} />,
+      id: "4"
+    },
+    {
+      title: <FormattedMessage {...messages.bundleXl} />,
+      key: "5",
+      content: <ContentForBundItem data={bundle5} />,
+      id: "5"
+    },
+    {
+      title: <FormattedMessage {...messages.bundleXxl} />,
+      key: "6",
+      content: <ContentForBundItem data={bundle6} />,
+      id: "6"
+    }
+  ];
+  const tabMenu = [
+    {
+      title: <FormattedMessage {...messages.minuitUneIVCarre} />,
+      key: "1",
+      content: content1,
+      id: "1"
+    },
+    {
+      title: <FormattedMessage {...messages.monitoringBundle} />,
+      key: "2",
+      content: content2,
+      id: "2"
+    },
+    {
+      title: <FormattedMessage {...messages.paBundles} />,
+      key: "3",
+      content: <ContentForPaBundles subTabMenu={subTabMenu} />,
+      id: "3"
+    }
+  ];
+  return (
+    <div className="rental ">
+      <CustomizedTabs tabMenu={tabMenu} className="rental-tabs" />
+    </div>
+  );
+};
 
- 
-    const tabMenu = [
-        {
-            title:<FormattedMessage {...messages.title1} />,
-            key: 'title1',
-            content: content1,
-            id: '1'
-        }, {
-            title:<FormattedMessage {...messages.title2} />,
-            key: 'title2',
-            content: content2,
-            id: '2'
-        }, {
-            title: <FormattedMessage {...messages.title3} />,
-            key: 'title3',
-            content: <Exemple />,
-            id: '3'
-        }
-        , {
-            title: <FormattedMessage {...messages.title4} />,
-            key: 'title4',
-            content: <Exemple />,
-            id: '4'
-        }
-        , {
-            title: <FormattedMessage {...messages.title5} />,
-            key: 'title5',
-            content: <Exemple />,
-            id: '5'
-        }
-        , {
-            title: <FormattedMessage {...messages.title6} />,
-            key: 'title6',
-            content: <Exemple />,
-            id: '6'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-        , {
-            title: <FormattedMessage {...messages.title7} />,
-            key: 'title7',
-            content: <Exemple />,
-            id: '7'
-        }
-    ]
-    return (
-        <div className="rental">
-            <CustomizedTabs tabMenu={tabMenu} className="rental-tabs"/>
-        </div>
-    );
-}
-
-export default  Rental
+export default Rental;
