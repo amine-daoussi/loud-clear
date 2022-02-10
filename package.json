@@ -7,7 +7,7 @@
     "babel-plugin-react-intl": "^5.1.16",
     "bootstrap": "^4.4.1",
     "i18n-react": "^0.7.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-gesture-gallery": "^1.1.0",
